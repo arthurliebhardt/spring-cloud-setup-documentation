@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c41daeb-30c6-4363-a4e9-beb961deef12" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -20,20 +21,7 @@
     </projectState>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="138" selection-start-line="2" selection-start-column="138" selection-end-line="2" selection-end-column="138" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -143,7 +131,9 @@
       <map>
         <entry key="$USER_HOME$/.gradle/gradle.properties" value="0" />
         <entry key="$PROJECT_DIR$" value="7614527027000" />
+        <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="3676632977" />
+        <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1741342742" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="3297196451" />
       </map>
     </option>
@@ -280,10 +270,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="147" />
-    <option name="y" value="37" />
-    <option name="width" value="2096" />
-    <option name="height" value="1252" />
+    <option name="x" value="315" />
+    <option name="y" value="96" />
+    <option name="width" value="2059" />
+    <option name="height" value="1204" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -394,16 +384,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523951419330</updated>
-      <workItem from="1523951424717" duration="67000" />
+      <workItem from="1523951424717" duration="321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67000" />
+    <option name="totallyTimeSpent" value="321000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="147" y="37" width="2096" height="1252" extended-state="0" />
-    <editor active="true" />
+    <frame x="119" y="52" width="1776" height="1072" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" />
       <window_info anchor="right" id="Palette" />
@@ -416,11 +405,11 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.39076924" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24975657" />
-      <window_info anchor="bottom" id="Build" visible="true" weight="0.32900432" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29584774" />
+      <window_info anchor="bottom" id="Build" weight="0.32900432" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Gradle" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
