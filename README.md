@@ -19,7 +19,7 @@ This Document will describe how the different spring cloud components will be ad
 
 # Create empty gradle project<a name="bootstrap"></a>
 
-First we need to create a core project for our whole spring cloud environment
+First we need to create a core project for our whole spring cloud environment test
 
 <img src="./gifs/create-empty-gradle-project.gif"/>
 
