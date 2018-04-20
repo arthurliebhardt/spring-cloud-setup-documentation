@@ -1,5 +1,5 @@
 
-#Config Server (Distributed Configuration)<a name="config"></a>
+# Config Server (Distributed Configuration)<a name="config"></a>
 
 The Config Server is the central source of all configuration files which are saved in an own git repository. So its an distributed configuration to all connected microservices.
 
