@@ -38,6 +38,7 @@ With the property spring.profiles.active=native we are able to store configs in 
 #### Remote Configuration (Git Repository)
 ##### application.properties
 The other and better approach for an productive version is using an github repository for storing all configs of the different applications.
+
 ```ini
 server.port=8888
 spring.cloud.config.server.git.uri=https://github.com/arthurliebhardt/spring-cloud-configs-example.git
