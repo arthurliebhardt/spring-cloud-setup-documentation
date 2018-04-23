@@ -116,7 +116,7 @@ cf push
 ```
 As we want to use this config server in other applications an use it as a service we need to make an user provided service in our cloud foundry.
 ```bash
-cf cups config-server -p '{"uri": "https://sc-config-server.cfapps.eu10.hana.ondemand.com"}'
+cf cups config-server -p '{"uri": "https://config-server.cfapps.eu10.hana.ondemand.com"}'
 ```
 cups is an abbreviation for create-user-provided-service.
 

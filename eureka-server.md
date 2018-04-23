@@ -11,6 +11,7 @@ Eureka Server is a discovery service ...
 compile('org.springframework.cloud:spring-cloud-starter-config')
 compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
 ```
+//TODO
 <img src="./gifs/create-eureka-server.gif"/>
 
 ### 2. @EnableEurekaServer in *EurekaServerApplication*
@@ -54,3 +55,40 @@ IntelliJ IDEA detects two spring boot applications and shows an Run Dashboard po
 After opening the Run Dashboard it shoud look like this:
 
 <img src="./imgs/run-dashboard.png"/>
+
+Then we need to start the Config Server first and Eureka Server after it. The Eureka Server connects to the Config Server and gets the Config. If everything went fine the Eureka Server ist started at port 8761 like in the screenshot.
+
+<img src="./imgs/eureka-running.png"/>
+
+On http://localhost:8761/ you should see the Eureka Dashboard without any connected services there.
+
+## 4. Push it to the cloud
+
+The manifest.yml contains the usual settings. We added here the services section where we bind the user provided config service to our eureka server application.
+
+```yml
+---
+applications:
+- name: eureka-server
+  host: eureka-server
+  path: build/libs/eureka-server-0.0.1-SNAPSHOT.jar
+  memory: 1024M
+  services:
+  - config-server
+```
+
+then we need to login into cloud foundry
+```bash
+cf login -a https://api.cf.eu10.hana.ondemand.com -u "YourEmail@mail.com"
+```
+
+After successful login we push it finally with the following comment
+```bash
+cf push
+```
+As we want to use this eureka server also as an own service in other applications we create a user provided service from it.
+
+```bash
+cf cups eureka-server -p '{"uri": "https://eureka-server.cfapps.eu10.hana.ondemand.com"}'
+```
+cups is an abbreviation for create-user-provided-service.
