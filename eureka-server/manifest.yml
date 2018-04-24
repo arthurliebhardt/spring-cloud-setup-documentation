@@ -1,0 +1,8 @@
+---
+applications:
+- name: eureka-server
+  host: eureka-server
+  path: build/libs/eureka-server-0.0.1-SNAPSHOT.jar
+  memory: 1024M
+  services:
+  - config-server
