@@ -3,10 +3,9 @@
 Eureka Server is a discovery service ...
 
 ### 1. Generating Spring Boot Application
- Generate a Spring Boot application with the **Eureka Server** and **Config Client** dependency
+ Generate a Spring Boot application with the `Eureka Server` and `Config Client` dependency
 
-#### build.gradle
-[buil.gradle]()TODOLINK in Github eureka-server branch
+##### build.gradle [GitHub](https://github.com/arthurliebhardt/spring-cloud-setup-documentation/blob/eureka-server/eureka-server/build.gradle)
 ```gradle
 compile('org.springframework.cloud:spring-cloud-starter-config')
 compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
@@ -14,8 +13,8 @@ compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
 //TODO
 <img src="./gifs/create-eureka-server.gif"/>
 
-### 2. @EnableEurekaServer in *EurekaServerApplication*
-[EurekaServerApplication]()TODO in Github
+### 2. `@EnableEurekaServer` in `EurekaServerApplication`
+##### EurekaServerApplication.kt [GitHub](https://github.com/arthurliebhardt/spring-cloud-setup-documentation/blob/eureka-server/eureka-server/src/main/kotlin/com/sap/ibso/example/eurekaserver/EurekaServerApplication.kt)
 ```kotlin
 @EnableEurekaServer
 @SpringBootApplication
@@ -25,19 +24,19 @@ fun main(args: Array<String>) {
 }
 ```
 
-### 3. delete application.properties and add a bootstrap.properties
+### 3. Delete `application.properties` and add a `bootstrap.properties`
 
-##### bootstrap.properties
+##### bootstrap.properties [GitHub](https://github.com/arthurliebhardt/spring-cloud-setup-documentation/blob/eureka-server/eureka-server/src/main/resources/bootstrap.properties)
 ```ini
 spring.application.name=eureka-server
 spring.cloud.config.uri=${vcap.services.config-server.credentials.uri:http://localhost:8888}
 ```
 
-## 4. Create eureka-server config in config repository
-**IMPORTANT**: The config name should be the same as the spring.application.name eureka-server.properties
+### 4. Create `eureka-server.properties` config in config repository
+**IMPORTANT**: The config name should be the same as the `spring.application.name`. In our case `eureka-server.properties`.
 
-##### eureka-server.properties 
-[eurea-server.properties example](https://github.com/arthurliebhardt/spring-cloud-configs-example/blob/master/eureka-server.properties)
+##### eureka-server.properties [GitHub Config Server](https://github.com/arthurliebhardt/spring-cloud-configs-example/blob/master/eureka-server.properties)
+
 ```ini
 server.port=${PORT:8761}
 
@@ -45,8 +44,8 @@ eureka.client.register-with-eureka=false
 eureka.client.fetch-registry=false
 ```
 
-## 3. Test it locally
-For testing it locally you need to start first the config-server and then the eureka-server. IntelliJ IDEA provides and Spring Run dashboard where you can start, debug, stop multiple Spring Boot Applications.
+### 3. Test it locally
+For testing the application locally we need to start first the `config-server` and then the `eureka-server`. IntelliJ IDEA provides a Spring Run dashboard where we can start, debug and stop multiple Spring Boot Applications.
 
 IntelliJ IDEA detects two spring boot applications and shows an Run Dashboard popup:
 
@@ -60,12 +59,17 @@ Then we need to start the Config Server first and Eureka Server after it. The Eu
 
 <img src="./imgs/eureka-running.png"/>
 
-On http://localhost:8761/ you should see the Eureka Dashboard without any connected services there.
+On http://localhost:8761/ we should see the Eureka Dashboard without any connected services there.
 
-## 4. Push it to the cloud
+Here is a GIF with the startup.
 
-The manifest.yml contains the usual settings. We added here the services section where we bind the user provided config service to our eureka server application.
+<img src="./gifs/start-config-eureka.gif"/>
 
+### 4. Push it to the cloud
+
+The `manifest.yml` contains the usual settings. We added here the services section where we bind the user provided `config-server` to our eureka server application.
+
+##### eureka-server.properties [GitHub](https://github.com/arthurliebhardt/spring-cloud-setup-documentation/blob/eureka-server/eureka-server/manifest.yml)
 ```yml
 ---
 applications:
@@ -86,7 +90,7 @@ After successful login we push it finally with the following comment
 ```bash
 cf push
 ```
-As we want to use this eureka server also as an own service in other applications we create a user provided service from it.
+As we want to use this eureka server also as an own service in other applications, so we create a user provided service from it.
 
 ```bash
 cf cups eureka-server -p '{"uri": "https://eureka-server.cfapps.eu10.hana.ondemand.com"}'

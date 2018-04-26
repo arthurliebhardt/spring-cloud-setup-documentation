@@ -1,5 +1,7 @@
 # Microservices
 
+IN PROGRESS..
+
 <img src="./imgs/spring-cloud.png"/>
 
 This Document will describe how the different spring cloud components will be added in a project and how they work together. I will use different branches for the different spring cloud packages. The Master Branch has the whole project included. The documentation will have a focus on deploying the spring cloud environment in Cloud Foundry on the SAP Cloud Platform.
