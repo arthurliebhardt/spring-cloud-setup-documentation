@@ -69,7 +69,6 @@ If the tomcat started successfully we can reach the config server under <http://
 The output is the following:
 
 ```json
-// 20180426151023
 // http://localhost:8888/hello-service/default
 
 {

@@ -10,7 +10,7 @@ Eureka Server is a discovery service ...
 compile('org.springframework.cloud:spring-cloud-starter-config')
 compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
 ```
-//TODO
+//TODO Create GIF
 <img src="./gifs/create-eureka-server.gif"/>
 
 ### 2. `@EnableEurekaServer` in `EurekaServerApplication`
